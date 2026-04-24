@@ -218,8 +218,8 @@ function App() {
 
 
             <div className="glass table-wrapper">
-              <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(0, 45, 114, 0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div className="table-header-content" style={{ padding: '1.5rem', borderBottom: '1px solid rgba(0, 45, 114, 0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: 0 }}>
                   <Search size={20} /> Detalhamento por Dia
                 </h3>
                 <div className="badge badge-success">Acuracidade: {stats && stats.accuracy}%</div>
