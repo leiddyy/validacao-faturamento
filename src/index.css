@@ -1,0 +1,49 @@
+:root {
+  --primary: #002d72; /* Blue Dia Distribuidora */
+  --secondary: #d4af37; /* Gold */
+  --bg-light: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --danger: #e03131;
+  --success: #2f9e44;
+  --text: #212529;
+  --text-muted: #868e96;
+  
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg-light);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f9fa;
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.glass {
+  background: #ffffff;
+  box-shadow: 0 8px 32px 0 rgba(0, 45, 114, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 45, 114, 0.1);
+  border-radius: 16px;
+}
