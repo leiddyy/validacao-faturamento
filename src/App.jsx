@@ -21,14 +21,15 @@ function App() {
 
   const formatDate = (val) => {
     if (val instanceof Date) {
+      // Check if it's a valid date and not the Excel "zero" date (1899/1900)
+      if (val.getFullYear() < 1920) return "Data Inválida";
       return val.toLocaleDateString('pt-BR');
     }
     if (typeof val === 'number' && val > 40000) {
-      // Handle Excel serial dates if not converted to Date objects
       const date = XLSX.utils.format_cell({ v: val, t: 'd' });
       return date;
     }
-    return val;
+    return val || "---";
   };
 
   const processFile = (file) => {
@@ -127,7 +128,7 @@ function App() {
 
 
   return (
-    <div className="container">
+    <div className="app-container">
       <header className="header">
         <div className="brand">
           <img src="/logo-dia.png" alt="Logo Dia Distribuidora" style={{ height: '50px', objectFit: 'contain' }} />
